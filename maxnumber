@@ -1,0 +1,28 @@
+numbers=([1,2,15,14])
+def find_maxim(L):
+     maxim=0
+     for x in L:
+         if x>maxim:
+            maxim=x
+     return maxim
+
+result21=find_maxim(numbers)
+print(result21)
+
+
+def find_max_recursive(L):
+    if len(L)==1:
+        return L[0]
+    v1=L[0]
+    #to L[1:] einai gia na parw tin L xwris to 1o stoixeio.
+    v2=find_max_recursive(L[1:])
+    if v1>v2:
+        return v1
+    else:
+        return v2
+result=find_max_recursive(numbers)
+print(result)
+
+
+
+#to prwto einai pio apodotiko gt pianei ligotero xwro!kai oi dyo omws einai swstes!!
